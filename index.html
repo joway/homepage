@@ -2,86 +2,46 @@
 <html>
 
 <head>
-  <title>Joway Wang</title>
+  <title>Hi, Joway</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Niramit|Source+Sans+Pro" rel="stylesheet">
+
   <style>
-    html,
-    body {
-      overflow: hidden;
-      margin: 0;
-    }
-
-    body {
-      font-family: 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
-      color: #333;
-    }
-
-    #wrapper {
-      position: absolute;
-      left: 0;
-      width: 320px;
-      text-align: center;
-      top: 50%;
-      left: 50%;
-      margin-left: -160px;
-      margin-top: -160px;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    h1 {
-      font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-      font-weight: 700;
-      font-size: 30px;
-      letter-spacing: 9px;
-      text-transform: uppercase;
-      margin: 12px 0;
-      left: 4px;
-    }
-
-    h2 {
-      color: #999;
-      font-weight: normal;
-      font-size: 12px;
-      letter-spacing: .12em;
-      margin-bottom: 30px;
-      left: 3px;
-    }
-
-    h1,
-    h2 {
-      position: relative;
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 2em;
-      margin: 0;
-      letter-spacing: 2px;
-    }
-
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-
     a {
-      color: #999;
-      text-decoration: none;
-      transition: color .2s ease;
+      color: #000;
+    }
+    .body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .holdon {
+      margin-top: 100px;
+      width: 100%;
+    }
+    .signatures {
+      font-family: 'Permanent Marker', sans-serif;
+      font-size: 3em;
+      width: 100%;
+      text-align: center;
+    }
+    .intro {
+      font-family: 'Source Sans Pro', sans-serif;
+      width: 100%;
+      margin: 0 30%;
+    }
+    @media only screen and (max-width: 600px) {
+      .intro {
+        margin: 0 10%;
+      }
+    }
+    .avatar {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
     }
 
-    a:hover {
-      color: #f33;
-    }
   </style>
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -98,36 +58,23 @@
 </head>
 
 <body>
-  <div id="wrapper">
-    <h1>Joway Wang</h1>
-    <h2>Coder & Photographer & Traveler</h2>
+  <div id="app" class="body">
+    <div class="holdon"></div>
+    <h1 class="signatures">Joway Wang</h1>
 
-    <div style="background-color:whitesmoke;height: 2px;margin: 15px"></div>
-
-    <p>
-      <a href="https://blog.joway.io" target="_blank">📖 Blog</a>
-    </p>
-    <p>
-      <a href="https://github.com/joway" target="_blank">👨‍💻 Github</a>
-    </p>
-    <p>
-      <a href="https://pho.joway.io" target="_blank">📸 Gallery</a>
-    </p>
-    <p>
-      <a href="https://blog.joway.io/travel/" target="_blank">✈️ Journey</a>
-    </p>
-
-    <!--
-    <p>
-      <a href="https://github.com/joway/lemon" target="_blank">Lemon | Proj</a>
-    </p>
-    <p>
-      <a href="https://github.com/joway/node-kfk" target="_blank">Node-Kfk | Proj</a>
-    </p>
-    <p>
-      <a href="https://github.com/joway/burrow-dashboard" target="_blank">Burrow Dashboard | Proj</a>
-    </p>
-    -->
+    <div class="intro">
+      <p>Hi friends, my name is Joway Wang. </p>
+      <p>I live in China and work as an infrastructure engineer. </p>
+      <p>I write chinese articles on <a href="https://blog.joway.io/" target="_blank"><b>Blog</b></a> ,
+        make some stuff on <a href="https://github.com/joway" target="_blank"><b>@Github</b></a> ,
+        take some photos on <a href="https://pho.joway.io/" target="_blank"><b>@Jallery</b></a> .</p>
+      <p>I'm using NodeJS, Python, Java, and learning Rust now. </p>
+      <br>
+      <p>You can find me on
+        <a href="https://www.instagram.com/joway.w/" target="_blank"><b>@Instagram</b></a> and
+        <a href="https://twitter.com/jowayw" target="_blank"><b>@Twitter</b></a> .
+      </p>
+    </div>
   </div>
 </body>
 
