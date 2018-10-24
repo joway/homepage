@@ -11,8 +11,7 @@ if (!userId) {
 }
 console.log('welcome', userId, '!');
 window.dataLayer = window.dataLayer || [];
-var dataLayer = window.dataLayer
-function gtag() { dataLayer.push(arguments); }
+function gtag() { window.dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'UA-53624533-8');
 gtag('set', { 'user_id': userId });
