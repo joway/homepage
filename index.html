@@ -46,6 +46,18 @@
         margin-right: 30%;
       }
 
+      @media only screen and (max-width: 1000px) {
+        .intro {
+          margin: 0 30%;
+        }
+      }
+
+      @media only screen and (max-width: 800px) {
+        .intro {
+          margin: 0 25%;
+        }
+      }
+
       @media only screen and (max-width: 600px) {
         .intro {
           margin: 0 10%;
@@ -60,6 +72,16 @@
 
       .link {
         margin-left: 3px;
+      }
+
+      .staff {
+        display: flex;
+        margin: 12px 0;
+      }
+      .staff-name {
+        width: 100px;
+      }
+      .staff-desc {
       }
     </style>
     <script
@@ -78,12 +100,12 @@
         <p>Hi, folks ! I'm Joway .</p>
         <p>I live in China and work as an infrastructure engineer.</p>
         <p>
-          I love writing some articles on
+          I write some articles on
           <a href="https://blog.joway.io/" target="_blank"><b>Blog</b></a
           >.
-        <!-- </p> -->
-        <!-- <p> -->
-          I have a online
+          <!-- </p> -->
+          <!-- <p> -->
+          and have a online
           <a href="https://pho.joway.io/" target="_blank"><b>Gallery</b></a
           >.
         </p>
@@ -94,7 +116,11 @@
             <b>@Github</b>
           </a>
           ,
-          <a class="link" href="https://www.instagram.com/joway.w/" target="_blank">
+          <a
+            class="link"
+            href="https://www.instagram.com/joway.w/"
+            target="_blank"
+          >
             <b>@Instagram</b>
           </a>
           ,
@@ -103,6 +129,31 @@
           </a>
           .
         </p>
+
+        <div>
+          <h3>Some staff I have made</h3>
+          <div class="staff">
+            <div class="staff-name">
+              <a href="An async and lightweight API framework for python"
+                ><b>Lemon</b></a
+              >
+            </div>
+            <div class="staff-desc">
+              An async and lightweight API framework for python.
+            </div>
+          </div>
+
+          <div class="staff">
+            <div class="staff-name">
+              <a href="An async and lightweight API framework for python"
+                ><b>node-kfk</b></a
+              >
+            </div>
+            <div class="staff-desc">
+                A simplified kafka client based on node-rdkafka.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
