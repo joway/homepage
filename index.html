@@ -24,7 +24,7 @@
       }
 
       .holdon {
-        margin-top: 100px;
+        margin-top: 50px;
         width: 100%;
       }
 
@@ -79,9 +79,19 @@
         margin: 12px 0;
       }
       .stuff-name {
-        width: 100px;
+        width: 200px;
       }
       .stuff-desc {
+        width: 100%;
+      }
+
+      .divide {
+        width: 100%;
+      }
+      .line {
+        height: 1px;
+        width: 100%;
+        background-color: #c4cbcf;
       }
     </style>
     <script
@@ -97,14 +107,12 @@
       <h1 class="signatures"><a href="/">Joway Wang</a></h1>
 
       <div class="intro">
-        <p>Hi, folks ! I'm Joway .</p>
+        <p>Hi, folks ! I'm Joway.</p>
         <p>I live in China and work as an infrastructure engineer.</p>
         <p>
           I write some articles on
           <a href="https://blog.joway.io/" target="_blank"><b>Blog</b></a
           >,
-          <!-- </p> -->
-          <!-- <p> -->
           and have a online
           <a href="https://pho.joway.io/" target="_blank"><b>Gallery</b></a
           >.
@@ -130,20 +138,30 @@
           .
         </p>
 
+        <div class="divide"><div class="line"></div></div>
         <div>
           <h3>Some stuff I have made</h3>
           <div class="stuff">
             <div class="stuff-name">
-              <a href="https://github.com/joway/lemon"><b>Lemon</b></a>
+              <a href="https://github.com/joway/lemon" target="_blank"><b>Lemon</b></a>
             </div>
             <div class="stuff-desc">
               An async and lightweight API framework for python.
             </div>
           </div>
-
           <div class="stuff">
             <div class="stuff-name">
-              <a href="https://github.com/joway/node-kfk"><b>node-kfk</b></a>
+              <a href="https://github.com/joway/color-cn" target="_blank"
+                ><b>Coloring China</b></a
+              >
+            </div>
+            <div class="stuff-desc">
+              Spread Chinese traditional colors to the world.
+            </div>
+          </div>
+          <div class="stuff">
+            <div class="stuff-name">
+              <a href="https://github.com/joway/node-kfk" target="_blank"><b>node-kfk</b></a>
             </div>
             <div class="stuff-desc">
               A simplified kafka client based on node-rdkafka.
