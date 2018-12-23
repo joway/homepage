@@ -6,6 +6,16 @@ gtag("js", new Date());
 gtag("config", "UA-53624533-8");
 // get domain
 var domain = window.location.host;
+if (
+  domain &&
+  (domain.indexOf("localhost") >= 0 || domain.indexOf("127.0.0.1") >= 0)
+) {
+  return;
+}
+if (domain && !domain.endsWith("joway.io")) {
+  alert("Please remove Joway's personal analytics code !");
+  return;
+}
 // get userId
 var userId = window.localStorage.getItem("userId");
 var event_type = "user_login";
