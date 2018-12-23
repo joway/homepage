@@ -15,5 +15,5 @@ if (!userId) {
   event_type = "user_register";
 }
 gtag("set", { user_id: userId });
-gtag("event", event_type, { method: domain });
-console.log("welcome", userId, "!");
+gtag("event", event_type);
+gtag("event", event_type + "_" + domain);
