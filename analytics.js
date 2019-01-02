@@ -20,15 +20,17 @@ function analytics() {
     alert("Please remove Joway's personal analytics code !");
     return;
   }
-  var event_type = "user_login";
+  var event_action = "login";
   if (!userId) {
     userId = Math.floor(Math.random() * 1000000000000);
     window.localStorage.setItem("userId", userId);
-    event_type = "user_register";
+    event_action = "register";
   }
   gtag("set", { user_id: userId });
-  gtag("event", event_type);
-  gtag("event", event_type + "_" + domain);
+  gtag("event", event_action, {
+    event_category: "user",
+    event_label: domain
+  });
 }
 
 analytics();
