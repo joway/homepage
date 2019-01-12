@@ -14,12 +14,23 @@
     <meta name="author" content="Joway Wang" />
     <link rel="shortcut icon" href="/logo.png" type="image/x-png" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Permanent+Marker|Source+Sans+Pro"
-      rel="stylesheet"
-    />
-
     <style>
+      /* fonts */
+      @font-face {
+        font-family: "Permanent Marker";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Permanent Marker Regular"), local("PermanentMarker-Regular"),
+          url(https://fonts.gstatic.com/s/permanentmarker/v7/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Ceg.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: 'Noto Sans TC';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Noto Sans TC Regular'), local('NotoSansTC-Regular'), url(https://fonts.gstatic.com/s/notosanstc/v4/-nF7OG829Oofr2wohFbTp9i1OCEJ.otf) format('opentype');
+      }
+
       body {
         margin: 0;
         background-color: #fff000;
@@ -29,6 +40,7 @@
       }
 
       .body {
+        font-family: 'Noto Sans TC', sans-serif;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -51,7 +63,6 @@
       }
 
       .intro {
-        font-family: "Source Sans Pro", sans-serif;
         font-size: 18px;
       }
 
