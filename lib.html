@@ -35,12 +35,16 @@
         margin: 0;
         background-color: #fce34f;
       }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .header {
+        margin-top: 32px;
+      }
       .logo {
         width: 150px;
         margin-top: 6px;
-      }
-      .title {
-        margin-top: 32px;
       }
       .block {
         display: block;
@@ -62,39 +66,51 @@
         background: #fff;
         border-radius: 50%;
       }
+
+      .footer {
+        margin: 50px 0;
+      }
     </style>
   </head>
   <body>
     <div id="app" class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <div class="row center-xs">
-          <div class="col-xs-12">
+          <div class="col-xs-12 header">
             <a href="/" class="title">
               <img class="logo" src="/lib.png" alt="lib logo"
             /></a>
           </div>
         </div>
         <div class="row">
-          <div v-for="image in images" class="col-xs-6 col-md-4 col-sm-3 proj">
+          <div v-for="proj in projects" class="col-xs-6 col-md-4 col-sm-3 proj">
             <div class="block">
-              <a :href="image.link" target="_blank">
+              <a :href="proj.link" target="_blank">
                 <img
                   class="proj-logo"
                   width="100px;"
-                  :src="image.logo"
-                  alt="image link"
+                  :src="proj.logo"
+                  alt="proj link"
                 />
               </a>
             </div>
-            <div class="block proj-name">{{ image.name }}</div>
-            <div class="block proj-desc">{{ image.desc }}</div>
+            <div class="block proj-name">{{ proj.name }}</div>
+            <div class="block proj-desc">{{ proj.desc }}</div>
+          </div>
+        </div>
+
+        <div class="row center-xs">
+          <div class="col-xs-12">
+            <div class="footer">
+              <a href="/"><b>@Joway</b></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <script>
-      function newImage(name, desc, logo, link) {
+      function newProj(name, desc, logo, link) {
         return {
           name: name,
           desc: desc,
@@ -102,44 +118,44 @@
           link: link
         };
       }
-      var images = [
-        newImage(
+      var projects = [
+        newProj(
           "Blog",
           "Joway's Blog",
           "https://blog.joway.io/logo.png",
           "https://blog.joway.io"
         ),
-        newImage(
+        newProj(
           "Jallery",
           "Joway's Gallery",
           "https://pho.joway.io/logo.png",
           "https://pho.joway.io"
         ),
-        newImage(
+        newProj(
           "Lemon",
           "An async and lightweight API framework for python.",
           "https://pylemon.com/logo.png",
-          "https://github.com/joway/imagic"
+          "https://github.com/joway/lemon"
         ),
-        newImage(
+        newProj(
           "Imagic",
           "An easy and fast tool to process images.",
           "https://imagic.joway.io/logo.png",
           "https://github.com/joway/imagic"
         ),
-        newImage(
+        newProj(
           "Decide It",
           "Make your decision more thoughtful.",
           "https://decision.joway.io/logo.png",
           "https://decision.joway.io"
         ),
-        newImage(
+        newProj(
           "Coloring China",
           "Spread Chinese traditional colors to the world.",
           "https://se.joway.io/logo.png",
           "https://se.joway.io"
         ),
-        newImage(
+        newProj(
           "WASM Checker",
           "Does your browser supports WebAssembly?",
           "https://wasm.joway.io/logo.png",
@@ -149,7 +165,7 @@
       var app = new Vue({
         el: "#app",
         data: {
-          images: images
+          projects: projects
         }
       });
     </script>
