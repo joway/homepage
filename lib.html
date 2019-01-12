@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <!-- <link rel="shortcut icon" href="/assets/chick.png" type="image/x-png" /> -->
+    <title>Lib | Joway Wang</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="lib, joway" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Joway Wang" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flexboxgrid@6.3.1/dist/flexboxgrid.min.css"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+
+    <style>
+      body {
+        font-family: "Noto Sans TC", sans-serif;
+        margin: 0;
+        background-color: #fce34f;
+      }
+      .logo {
+        width: 150px;
+        margin-top: 6px;
+      }
+      .title {
+        margin-top: 32px;
+      }
+      .block {
+        display: block;
+      }
+      .proj {
+        text-align: center;
+        margin-top: 32px;
+        padding: 0 5%;
+      }
+      .proj-name {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 12px 0;
+      }
+      .proj-desc {
+        margin: 12px 0;
+      }
+      .proj-logo {
+        background: #fff;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div class="row center-xs">
+          <div class="col-xs-12">
+            <a href="/" class="title">
+              <img class="logo" src="/lib.png" alt="lib logo"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div v-for="image in images" class="col-xs-6 col-md-4 col-sm-3 proj">
+            <div class="block">
+              <a :href="image.link" target="_blank">
+                <img
+                  class="proj-logo"
+                  width="100px;"
+                  :src="image.logo"
+                  alt="image link"
+                />
+              </a>
+            </div>
+            <div class="block proj-name">{{ image.name }}</div>
+            <div class="block proj-desc">{{ image.desc }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function newImage(name, desc, logo, link) {
+        return {
+          name: name,
+          desc: desc,
+          logo: logo,
+          link: link
+        };
+      }
+      var images = [
+        newImage(
+          "Blog",
+          "Joway's Blog",
+          "https://blog.joway.io/logo.png",
+          "https://blog.joway.io"
+        ),
+        newImage(
+          "Jallery",
+          "Joway's Gallery",
+          "https://pho.joway.io/logo.png",
+          "https://pho.joway.io"
+        ),
+        newImage(
+          "Decide It",
+          "Make your decision more thoughtful.",
+          "https://decision.joway.io/logo.png",
+          "https://decision.joway.io"
+        ),
+        newImage(
+          "Coloring China",
+          "Spread Chinese traditional colors to the world.",
+          "https://se.joway.io/logo.png",
+          "https://se.joway.io"
+        ),
+        newImage(
+          "WASM Checker",
+          "Does your browser supports WebAssembly?",
+          "https://wasm.joway.io/logo.png",
+          "https://wasm.joway.io"
+        )
+      ];
+      var app = new Vue({
+        el: "#app",
+        data: {
+          images: images
+        }
+      });
+    </script>
+  </body>
+</html>
