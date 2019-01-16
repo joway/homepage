@@ -4,7 +4,7 @@ var domain = window.location.host;
 // get userId
 var userId = window.localStorage.getItem("userId");
 var isAna = domain && !domain.endsWith("joway.io");
-var isAds = domain && !domain.endsWith("blog.joway.io");
+var isAds = domain && domain.endsWith("blog.joway.io");
 
 function gtag() {
   dataLayer.push(arguments);
