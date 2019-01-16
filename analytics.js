@@ -3,6 +3,8 @@ window.dataLayer = window.dataLayer || [];
 var domain = window.location.host;
 // get userId
 var userId = window.localStorage.getItem("userId");
+var isAna = domain && !domain.endsWith("joway.io");
+var isAds = domain && !domain.endsWith("blog.joway.io");
 
 function gtag() {
   dataLayer.push(arguments);
@@ -16,7 +18,7 @@ function analytics() {
   ) {
     return;
   }
-  if (domain && !domain.endsWith("joway.io")) {
+  if (isAna) {
     alert("Please remove Joway's personal analytics code !");
     return;
   }
@@ -35,12 +37,17 @@ function analytics() {
 
 analytics();
 
-// ad sense
-var ad_sense_script = document.createElement("script");
-ad_sense_script.setAttribute("src", "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
-document.head.appendChild(ad_sense_script);
+if (isAds) {
+  // ad sense
+  var ad_sense_script = document.createElement("script");
+  ad_sense_script.setAttribute(
+    "src",
+    "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  );
+  document.head.appendChild(ad_sense_script);
 
-(adsbygoogle = window.adsbygoogle || []).push({
-  google_ad_client: "ca-pub-6400651395935595",
-  enable_page_level_ads: true
-});
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6400651395935595",
+    enable_page_level_ads: true
+  });
+}
