@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Avatar | Joway</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="description" content="Avatar | Joway Wang" />
+  <meta name="keywords" content="joway, avatar, introduction" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="author" content="Joway Wang" />
+  <link rel="shortcut icon" href="https://cdn.staticaly.com/img/joway.io/logo.png" type="image/x-png" />
+  <style>
+    :root {
+      --w: 20vw;
+      --h: calc(var(--w) / 3 * 4);
+      --col: 4;
+    }
+
+    .avatar {
+      background: #f1dfb9;
+      width: var(--w);
+      height: var(--h);
+    }
+
+    .avatar,
+    .avatar [outline] {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    .avatar [outline] {
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 4;
+
+      --x: calc(100% / 3);
+      --y: calc(100% / 4);
+      --dx: calc(var(--x) * 2);
+
+      --polygon: polygon(var(--x) 0,
+        var(--x) 25%,
+        0 25%,
+        0 50%,
+        var(--x) 75%,
+        0 100%,
+        var(--x) 100%,
+        var(--x) 37.5%,
+        var(--dx) 37.5%,
+        var(--dx) 75.1%,
+        calc(var(--x) + 1.5%) 100%,
+        100.05% 100%,
+        100.05% 75.1%,
+        var(--dx) 75.1%,
+        100.05% 50%,
+        100.05% 25%,
+        var(--dx) 25%,
+        var(--dx) 0);
+      -webkit-clip-path: var(--polygon);
+      clip-path: var(--polygon);
+    }
+
+    .avatar [outline] div:nth-child(2),
+    .avatar [outline] div:nth-child(4),
+    .avatar [outline] div:nth-child(6) {
+      background: #000;
+    }
+
+    .avatar [outline] div:nth-child(5) {
+      background: #9869af;
+    }
+
+    .avatar [outline] div:nth-child(7),
+    .avatar [outline] div:nth-child(9) {
+      background: #151515;
+      box-shadow: 0 -.1px 0 0 #000;
+    }
+
+    .avatar [outline] div:nth-child(10) {
+      background: #1f3598;
+    }
+
+    .avatar [outline] div:nth-child(11) {
+      background: #009373;
+    }
+
+    .avatar [outline] div:nth-child(12) {
+      background: #ea0a2c;
+    }
+
+    .avatar [needle] {
+      background: #2cc1c8;
+      grid-column: 3;
+      grid-row: 1;
+      --circle: circle(47% at 47.8% 53%);
+      -webkit-clip-path: var(--circle);
+      clip-path: var(--circle);
+    }
+
+    .avatar [face] {
+      grid-column: 2;
+      grid-row: 2 / 5;
+      background: #fff;
+    }
+
+    .avatar [eyes],
+    .avatar [cheek] {
+      height: calc(100% / 12);
+    }
+
+    .avatar [cheek] {
+      background: linear-gradient(#ffcde8, #ffffff);
+    }
+
+    .avatar [eyes] {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      margin-bottom: 1.2%;
+      margin-top: 50.5%;
+    }
+
+    .avatar [eyes]>div {
+      background-color: #ea0a2c;
+      border-radius: 50%;
+      --size: calc(var(--w) / 13.5);
+      width: var(--size);
+      height: var(--size);
+    }
+
+    .avatar [eyes]>div:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(#000 50%, transparent 50%);
+    }
+
+    .avatar [left-eye]:after {
+      transform: rotate(32deg);
+      transform-origin: 100% 100%;
+      margin: 60% auto auto -28%;
+      z-index: 2;
+    }
+
+    .avatar [right-eye]:after {
+      transform: rotate(-32deg);
+      transform-origin: 0 100%;
+      margin: 60% auto auto 28%;
+      z-index: 2;
+    }
+
+    .avatar [mouth] {
+      background: #ab2123;
+      border-radius: 50%;
+      margin: 48% auto 0;
+      --size: calc(var(--w) / 20);
+      width: var(--size);
+      height: var(--size);
+    }
+
+    .avatar [mouth]:after {
+      content: '';
+      display: block;
+      border-radius: 50%;
+      width: 120%;
+      height: 120%;
+      background: #ef113a;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 15%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="avatar">
+        <div outline>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div needle></div>
+        <div face>
+          <div eyes>
+            <div left-eye></div>
+            <div right-eye></div>
+          </div>
+          <div cheek></div>
+          <div mouth></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
