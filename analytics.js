@@ -3,7 +3,13 @@ window.dataLayer = window.dataLayer || [];
 var domain = window.location.host;
 // get userId
 var userId = window.localStorage.getItem("userId");
-var isAna = domain && !domain.endsWith("joway.io");
+var domains = ['joway.io', 'fastchina.io']
+var isAna = false
+domains.forEach(function (d) {
+  if (domain && domain.endsWith(d)) {
+    isAna = true
+  }
+})
 // var isAds = domain && domain.endsWith("blog.joway.io");
 
 function gtag() {
@@ -18,7 +24,7 @@ function analytics() {
   ) {
     return;
   }
-  if (isAna) {
+  if (!isAna) {
     alert("Please remove Joway's personal analytics code !");
     return;
   }
