@@ -11,7 +11,7 @@
   <meta name="robots" content="index, follow" />
   <meta name="language" content="English" />
   <meta name="author" content="Joway Wang" />
-  <link rel="shortcut icon" href="https://cdn.staticaly.com/img/joway.io/lib.png" type="image/x-png" />
+  <link rel="shortcut icon" href="/lib.jpg" type="image/x-png" />
 
   <link rel="stylesheet" href="https://unpkg.com/flexboxgrid@6.3.1/dist/flexboxgrid.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
@@ -82,7 +82,7 @@
       <div class="row center-xs">
         <div class="col-xs-12 header">
           <a href="/" class="title">
-            <img class="logo" src="https://cdn.staticaly.com/img/joway.io/lib.png" alt="lib logo" /></a>
+            <img class="logo" src="/lib.jpg" alt="lib logo" /></a>
         </div>
       </div>
       <div class="row">
@@ -112,35 +112,11 @@
       return {
         name: name,
         desc: desc,
-        logo: `https://cdn.staticaly.com/img/${logo.replace('https://', '')}`,
-        link: link
+        logo: `https://cdn.statically.io/img/${logo.replace('https://', '')}`,
+        link: link,
       };
     }
     var projects = [
-      newProj(
-        "Blog",
-        "Joway's Blog",
-        "https://blog.joway.io/logo.png",
-        "https://blog.joway.io"
-      ),
-      newProj(
-        "Jallery",
-        "Joway's Gallery",
-        "https://pho.joway.io/logo.png",
-        "https://pho.joway.io"
-      ),
-      newProj(
-        "Node-KFK",
-        "A simplified kafka client.",
-        "https://kfk.joway.io/logo.png",
-        "https://github.com/joway/node-kfk"
-      ),
-      newProj(
-        "Socket.IO-KFK",
-        "A kafka adapter for socket.io.",
-        "https://socket-io-kfk.joway.io/logo.png",
-        "https://github.com/joway/socket.io-kfk"
-      ),
       newProj(
         "Lemon",
         "An async and lightweight API framework for python.",
@@ -158,6 +134,18 @@
         "Make your decision more thoughtful.",
         "https://decision.joway.io/logo.png",
         "https://decision.joway.io"
+      ),
+      newProj(
+        "Node-KFK",
+        "A simplified kafka client.",
+        "https://kfk.joway.io/logo.png",
+        "https://github.com/joway/node-kfk"
+      ),
+      newProj(
+        "Node-Routine",
+        "A kafka adapter for socket.io.",
+        "https://routine.joway.io/public/logo.png",
+        "https://github.com/joway/node-routine/"
       ),
       newProj(
         "Coloring China",

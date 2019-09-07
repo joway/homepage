@@ -1,142 +1,137 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hi, folks | Joway</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta
-      name="viewport"
-      content="initial-scale=1, maximum-scale=1, user-scalable=no"
-    />
-    <meta name="description" content="Self Introduction | Joway Wang" />
-    <meta name="keywords" content="joway, homepage, introduction" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
-    <meta name="author" content="Joway Wang" />
-    <link rel="shortcut icon" href="https://cdn.staticaly.com/img/joway.io/logo.png" type="image/x-png" />
 
-    <style>
-      /* fonts */
-      @font-face {
-        font-family: "Permanent Marker";
-        font-style: normal;
-        font-weight: 400;
-        src: local("Permanent Marker Regular"), local("PermanentMarker-Regular"),
-          url(https://fonts.gstatic.com/s/permanentmarker/v7/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Ceg.ttf)
-            format("truetype");
-      }
-      @font-face {
-        font-family: 'Noto Sans TC';
-        font-style: normal;
-        font-weight: 400;
-        src: local('Noto Sans TC Regular'), local('NotoSansTC-Regular'), url(https://fonts.gstatic.com/s/notosanstc/v4/-nF7OG829Oofr2wohFbTp9i1OCEJ.otf) format('opentype');
-      }
+<head>
+  <title>Hi, folks | Joway</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="description" content="Self Introduction | Joway Wang" />
+  <meta name="keywords" content="joway, homepage, introduction" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="author" content="Joway Wang" />
+  <link rel="shortcut icon" href="https://cdn.staticaly.com/img/joway.io/logo.png" type="image/x-png" />
 
-      body {
-        margin: 0;
-        /* background-color: #f7f4ed; */
-      }
-      a {
-        color: #000;
-      }
+  <style>
+    /* fonts */
+    @font-face {
+      font-family: "Permanent Marker";
+      font-style: normal;
+      font-weight: 400;
+      src: local("Permanent Marker Regular"), local("PermanentMarker-Regular"),
+        url(https://fonts.gstatic.com/s/permanentmarker/v7/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Ceg.ttf) format("truetype");
+    }
 
-      .body {
-        font-family: 'Noto Sans TC', sans-serif;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
+    @font-face {
+      font-family: 'Noto Sans TC';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Noto Sans TC Regular'), local('NotoSansTC-Regular'), url(https://fonts.gstatic.com/s/notosanstc/v4/-nF7OG829Oofr2wohFbTp9i1OCEJ.otf) format('opentype');
+    }
 
-      .holdon {
-        margin-top: 50px;
-        width: 100%;
-      }
+    body {
+      margin: 0;
+      /* background-color: #f7f4ed; */
+    }
 
-      .signatures {
-        font-family: "Permanent Marker", sans-serif;
-        font-size: 3em;
-        width: 100%;
-        text-align: center;
-      }
+    a {
+      color: #000;
+    }
 
-      .signatures a {
-        text-decoration: none;
-      }
+    .body {
+      font-family: 'Noto Sans TC', sans-serif;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
+    .holdon {
+      margin-top: 50px;
+      width: 100%;
+    }
+
+    .signatures {
+      font-family: "Permanent Marker", sans-serif;
+      font-size: 3em;
+      width: 100%;
+      text-align: center;
+    }
+
+    .signatures a {
+      text-decoration: none;
+    }
+
+    .intro {
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: 1000px) {
       .intro {
-        font-size: 18px;
+        margin: 0 30%;
       }
+    }
 
-      @media only screen and (max-width: 1000px) {
-        .intro {
-          margin: 0 30%;
-        }
+    @media only screen and (max-width: 800px) {
+      .intro {
+        margin: 0 25%;
       }
+    }
 
-      @media only screen and (max-width: 800px) {
-        .intro {
-          margin: 0 25%;
-        }
+    @media only screen and (max-width: 600px) {
+      .intro {
+        margin: 0 32px;
       }
+    }
 
-      @media only screen and (max-width: 600px) {
-        .intro {
-          margin: 0 32px;
-        }
-      }
+    .social {
+      text-align: right;
+    }
 
-      .social {
-        text-align: right;
-      }
-      .social a {
-        text-decoration: none;
-      }
-      .icon {
-        width: 25px;
-        margin-left: 20px;
-      }
-    </style>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-53624533-8"
-    ></script>
-    <script src="/analytics.js"></script>
-  </head>
+    .social a {
+      text-decoration: none;
+    }
 
-  <body>
-    <div id="app" class="body">
-      <div class="holdon"></div>
-      <h1 class="signatures"><a href="/">Joway Wang</a></h1>
+    .icon {
+      width: 25px;
+      margin-left: 20px;
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53624533-8"></script>
+  <script src="/analytics.js"></script>
+</head>
 
-      <div class="intro">
-        <p>Hi, folks! I'm Joway.</p>
-        <p>I live in China and work as an infrastructure engineer.</p>
-        <p>
-          <a href="/lib.html"><b>Here</b></a> is some stuff I have made.
-        </p>
-        <p class="social">
-          <a href="https://github.com/joway" target="_blank">
-            <img
-              class="icon"
-              src="/static/fontawesome/svgs/brands/github.svg"
-              alt="github icon"
-            />
-          </a>
-          <a href="https://www.instagram.com/joway.w/" target="_blank">
-            <img
-              class="icon"
-              src="/static/fontawesome/svgs/brands/instagram.svg"
-              alt="github icon"
-            />
-          </a>
-          <a href="https://twitter.com/jowayw" target="_blank">
-            <img
-              class="icon"
-              src="/static/fontawesome/svgs/brands/twitter.svg"
-              alt="github icon"
-            />
-          </a>
-        </p>
-      </div>
+<body>
+  <div id="app" class="body">
+    <div class="holdon"></div>
+    <h1 class="signatures"><a href="/">Joway Wang</a></h1>
+
+    <div class="intro">
+      <p>Hi, folks, I'm Joway.</p>
+      <p>I live in China and work as an
+        <a href="https://www.linkedin.com/in/jowayw/" target="_blank">
+          Infrastructure Engineer</a> 👨‍💻.
+      </p>
+      <p>I am also a <a href="https://blog.joway.io" target="_blank">Blogger</a> 📝,
+        <a href="https://pho.joway.io" target="_blank">Photographer</a> 📸,
+        and <a href="https://blog.joway.io/travel/" target="_blank">Traveler</a> 🌍.
+      </p>
+      <p>I have a Ragdoll Cat named <a href="https://blog.joway.io/cat" target="_blank">Kui</a> 😼. </p>
+      <p>
+        <a href="/lib.html"><b>Here</b></a> are some open source projects I have made.
+      </p>
+      <p class="social">
+        <a href="https://github.com/joway" target="_blank">
+          <img class="icon" src="/static/fontawesome/svgs/brands/github.svg" alt="github icon" />
+        </a>
+        <a href="https://www.instagram.com/joway.w/" target="_blank">
+          <img class="icon" src="/static/fontawesome/svgs/brands/instagram.svg" alt="github icon" />
+        </a>
+        <a href="https://twitter.com/jowayw" target="_blank">
+          <img class="icon" src="/static/fontawesome/svgs/brands/twitter.svg" alt="github icon" />
+        </a>
+      </p>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
