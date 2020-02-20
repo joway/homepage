@@ -13,15 +13,6 @@
   <link rel="shortcut icon" href="https://cdn.staticaly.com/img/joway.io/logo.png" type="image/x-png" />
 
   <style>
-    /* fonts */
-    @font-face {
-      font-family: "Permanent Marker";
-      font-style: normal;
-      font-weight: 400;
-      src: local("Permanent Marker Regular"), local("PermanentMarker-Regular"),
-        url(https://fonts.gstatic.com/s/permanentmarker/v7/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Ceg.ttf) format("truetype");
-    }
-
     @font-face {
       font-family: 'Noto Sans TC';
       font-style: normal;
@@ -51,15 +42,8 @@
       width: 100%;
     }
 
-    .signatures {
-      font-family: "Permanent Marker", sans-serif;
-      font-size: 3em;
-      width: 100%;
-      text-align: center;
-    }
-
-    .signatures a {
-      text-decoration: none;
+    .avatar {
+      border-radius: 50%;
     }
 
     .intro {
@@ -104,9 +88,14 @@
 <body>
   <div id="app" class="body">
     <div class="holdon"></div>
-    <h1 class="signatures"><a href="/">Joway Wang</a></h1>
 
     <div class="intro">
+      <div style="text-align: right; margin-bottom: 50px;">
+        <a href="#">
+          <img class="avatar" src="avatar_japan.jpg" width="100">
+        </a>
+      </div>
+
       <p>Hi, folks, I'm Joway.</p>
       <p>I live in China and work as an
         <a href="https://www.linkedin.com/in/jowayw/" target="_blank">
@@ -116,7 +105,7 @@
         <a href="https://pho.joway.io" target="_blank">Photographer</a> 📸,
         and <a href="https://blog.joway.io/travel/" target="_blank">Traveler</a> 🌍.
       </p>
-      <p>I have a Ragdoll cat named <a href="https://blog.joway.io/cat" target="_blank">Kui</a> 😼. </p>
+      <p>I have a cat named <a href="https://blog.joway.io/cat" target="_blank">Kui</a> 😼. </p>
       <p>
         <a href="/lib.html">Here</a> are some projects I have made.
       </p>
