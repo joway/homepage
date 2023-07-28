@@ -3,7 +3,7 @@ window.dataLayer = window.dataLayer || [];
 var domain = window.location.host;
 // get userId
 var userId = window.localStorage.getItem("userId");
-var domains = ['joway.io', 'fastchina.io']
+var domains = ['joway.io']
 var isAna = false
 domains.forEach(function (d) {
   if (domain && domain.endsWith(d)) {
@@ -12,10 +12,17 @@ domains.forEach(function (d) {
 })
 // var isAds = domain && domain.endsWith("blog.joway.io");
 
+function unamiAnalytics() {
+  var UMAMI = document.createElement('script');
+  UMAMI.setAttribute('src','https://analytics.umami.is/script.js');
+  UMAMI.setAttribute('data-website-id','18b4f3e5-9feb-4c17-909f-bf19c7c77544');
+  document.head.appendChild(UMAMI);
+}
+
 function gtag() {
   dataLayer.push(arguments);
 }
-function analytics() {
+function googleAnalytics() {
   gtag("js", new Date());
   gtag("config", "UA-53624533-8");
   if (
@@ -41,8 +48,6 @@ function analytics() {
   });
 }
 
-analytics();
-
 // if (isAds) {
 //   // ad sense
 //   var ad_sense_script = document.createElement("script");
@@ -57,3 +62,6 @@ analytics();
 //     enable_page_level_ads: true
 //   });
 // }
+
+unamiAnalytics();
+googleAnalytics();
