@@ -1,178 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Lib | Joway Wang</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="description" content="" />
+    <meta name="keywords" content="lib, joway" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Joway Wang" />
+    <link rel="shortcut icon" href="/lib.jpg" type="image/x-png" />
 
-<head>
-  <title>Lib | Joway Wang</title>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="description" content="" />
-  <meta name="keywords" content="lib, joway" />
-  <meta name="robots" content="index, follow" />
-  <meta name="language" content="English" />
-  <meta name="author" content="Joway Wang" />
-  <link rel="shortcut icon" href="/lib.jpg" type="image/x-png" />
+    <link rel="stylesheet" href="/static/css/flexboxgrid.min.css" />
+    <script src="/static/js/vue.min.js"></script>
 
-  <link rel="stylesheet" href="https://unpkg.com/flexboxgrid@6.3.1/dist/flexboxgrid.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Noto Sans TC";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Noto Sans TC Regular"), local("NotoSansTC-Regular"),
+          url(https://fonts.gstatic.com/s/notosanstc/v4/-nF7OG829Oofr2wohFbTp9i1OCEJ.otf)
+            format("opentype");
+      }
 
-  <style>
-    @font-face {
-      font-family: "Noto Sans TC";
-      font-style: normal;
-      font-weight: 400;
-      src: local("Noto Sans TC Regular"), local("NotoSansTC-Regular"),
-        url(https://fonts.gstatic.com/s/notosanstc/v4/-nF7OG829Oofr2wohFbTp9i1OCEJ.otf) format("opentype");
-    }
+      body {
+        font-family: "Noto Sans TC", sans-serif;
+        margin: 0;
+        /* background-color: #fffef9; */
+      }
 
-    body {
-      font-family: "Noto Sans TC", sans-serif;
-      margin: 0;
-      /* background-color: #fffef9; */
-    }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
 
-    a {
-      text-decoration: none;
-      color: #000;
-    }
+      .header {
+        margin-top: 32px;
+      }
 
-    .header {
-      margin-top: 32px;
-    }
+      .logo {
+        width: 150px;
+        margin-top: 6px;
+      }
 
-    .logo {
-      width: 150px;
-      margin-top: 6px;
-    }
+      .block {
+        display: block;
+      }
 
-    .block {
-      display: block;
-    }
+      .proj {
+        text-align: center;
+        margin-top: 32px;
+        padding: 0 5%;
+      }
 
-    .proj {
-      text-align: center;
-      margin-top: 32px;
-      padding: 0 5%;
-    }
+      .proj-name {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 12px 0;
+      }
 
-    .proj-name {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 12px 0;
-    }
+      .proj-desc {
+        margin: 12px 0;
+      }
 
-    .proj-desc {
-      margin: 12px 0;
-    }
+      .proj-logo {
+        background: #fff;
+        border-radius: 50%;
+      }
 
-    .proj-logo {
-      background: #fff;
-      border-radius: 50%;
-    }
+      .footer {
+        margin: 50px 0;
+      }
+    </style>
+  </head>
 
-    .footer {
-      margin: 50px 0;
-    }
-  </style>
-</head>
-
-<body>
-  <div id="app" class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <div class="row center-xs">
-        <div class="col-xs-12 header">
-          <a href="/" class="title">
-            <img class="logo" src="/lib.jpg" alt="lib logo" /></a>
-        </div>
-      </div>
-      <div class="row">
-        <div v-for="proj in projects" class="col-xs-6 col-md-4 col-sm-3 proj">
-          <div class="block">
-            <a :href="proj.link" target="_blank">
-              <img class="proj-logo" width="100px;" :src="proj.logo" alt="proj link" />
-            </a>
+  <body>
+    <div id="app" class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div class="row center-xs">
+          <div class="col-xs-12 header">
+            <a href="/" class="title">
+              <img class="logo" src="/lib.jpg" alt="lib logo"
+            /></a>
           </div>
-          <div class="block proj-name">{{ proj.name }}</div>
-          <div class="block proj-desc">{{ proj.desc }}</div>
         </div>
-      </div>
+        <div class="row">
+          <div v-for="proj in projects" class="col-xs-6 col-md-4 col-sm-3 proj">
+            <div class="block">
+              <a :href="proj.link" target="_blank">
+                <img
+                  class="proj-logo"
+                  width="100px;"
+                  :src="proj.logo"
+                  alt="proj link"
+                />
+              </a>
+            </div>
+            <div class="block proj-name">{{ proj.name }}</div>
+            <div class="block proj-desc">{{ proj.desc }}</div>
+          </div>
+        </div>
 
-      <div class="row center-xs">
-        <div class="col-xs-12">
-          <div class="footer">
-            <a href="/"><b>@Joway</b></a>
+        <div class="row center-xs">
+          <div class="col-xs-12">
+            <div class="footer">
+              <a href="/"><b>@Joway</b></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    function newProj(name, desc, logo, link) {
-      return {
-        name: name,
-        desc: desc,
-        logo: logo,
-        link: link,
-      };
-    }
-    var projects = [
-      newProj(
-        "SheetSQL",
-        "Google Spreadsheet as a Database.",
-        "https://sheetsql.joway.io/logo.png",
-        "https://github.com/joway/sheetsql"
-      ),
-      newProj(
-        "Lemon",
-        "An async and lightweight API framework for python.",
-        "https://pylemon.joway.io/logo.png",
-        "https://github.com/joway/lemon"
-      ),
-      newProj(
-        "Imagic",
-        "An easy and fast tool to process images.",
-        "https://imagic.joway.io/logo.png",
-        "https://github.com/joway/imagic"
-      ),
-      newProj(
-        "Node-KFK",
-        "A simplified kafka client.",
-        "https://kfk.joway.io/logo.png",
-        "https://github.com/joway/node-kfk"
-      ),
-      newProj(
-        "Node-Routine",
-        "A library to implement Goroutine-Like API with worker_threads.",
-        "https://routine.joway.io/public/logo.png",
-        "https://github.com/joway/node-routine/"
-      ),
-      newProj(
-        "Decide It",
-        "Make your decision more thoughtful.",
-        "https://decision.joway.io/logo.png",
-        "https://decision.joway.io"
-      ),
-      newProj(
-        "Coloring China",
-        "Spread Chinese traditional colors to the world.",
-        "https://se.joway.io/logo.png",
-        "https://se.joway.io"
-      ),
-      newProj(
-        "WASM Checker",
-        "Does your browser supports WebAssembly?",
-        "https://wasm.joway.io/logo.png",
-        "https://wasm.joway.io"
-      )
-    ];
-    var app = new Vue({
-      el: "#app",
-      data: {
-        projects: projects
+    <script>
+      function newProj(name, desc, logo, link) {
+        return {
+          name: name,
+          desc: desc,
+          logo: logo,
+          link: link,
+        };
       }
-    });
-  </script>
-</body>
-
+      var projects = [
+        newProj(
+          "SheetSQL",
+          "Google Spreadsheet as a Database.",
+          "https://sheetsql.joway.io/logo.png",
+          "https://github.com/joway/sheetsql"
+        ),
+        newProj(
+          "Lemon",
+          "An async and lightweight API framework for python.",
+          "https://pylemon.joway.io/logo.png",
+          "https://github.com/joway/lemon"
+        ),
+        newProj(
+          "Imagic",
+          "An easy and fast tool to process images.",
+          "https://imagic.joway.io/logo.png",
+          "https://github.com/joway/imagic"
+        ),
+        newProj(
+          "Node-KFK",
+          "A simplified kafka client.",
+          "https://kfk.joway.io/logo.png",
+          "https://github.com/joway/node-kfk"
+        ),
+        newProj(
+          "Node-Routine",
+          "A library to implement Goroutine-Like API with worker_threads.",
+          "https://routine.joway.io/public/logo.png",
+          "https://github.com/joway/node-routine/"
+        ),
+        newProj(
+          "Decide It",
+          "Make your decision more thoughtful.",
+          "https://decision.joway.io/logo.png",
+          "https://decision.joway.io"
+        ),
+        newProj(
+          "Coloring China",
+          "Spread Chinese traditional colors to the world.",
+          "https://se.joway.io/logo.png",
+          "https://se.joway.io"
+        ),
+        newProj(
+          "WASM Checker",
+          "Does your browser supports WebAssembly?",
+          "https://wasm.joway.io/logo.png",
+          "https://wasm.joway.io"
+        ),
+      ];
+      var app = new Vue({
+        el: "#app",
+        data: {
+          projects: projects,
+        },
+      });
+    </script>
+  </body>
 </html>
