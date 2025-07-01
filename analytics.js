@@ -1,9 +1,9 @@
 window.dataLayer = window.dataLayer || [];
 // get domain
-var domain = window.location.host;
+var domain = window.location.hostname;
 // get userId
 var userId = window.localStorage.getItem("userId");
-var domains = ['joway.io']
+var domains = ['joway.io', 'localhost', '127.0.0.1']
 var isAna = false
 domains.forEach(function (d) {
   if (domain && domain.endsWith(d)) {
@@ -23,18 +23,12 @@ function gtag() {
   dataLayer.push(arguments);
 }
 function googleAnalytics() {
-  gtag("js", new Date());
-  gtag("config", "UA-53624533-8");
-  if (
-    domain &&
-    (domain.indexOf("localhost") >= 0 || domain.indexOf("127.0.0.1") >= 0)
-  ) {
-    return;
-  }
   if (!isAna) {
     alert("Please remove Joway's personal analytics code !");
     return;
   }
+  gtag("js", new Date());
+  gtag("config", "UA-53624533-8");
   var event_action = "login";
   if (!userId) {
     userId = Math.floor(Math.random() * 1000000000000);
