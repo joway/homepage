@@ -27,18 +27,17 @@ function googleAnalytics() {
     alert("Please remove Joway's personal analytics code !");
     return;
   }
-  gtag("js", new Date());
-  gtag("config", "UA-53624533-8");
-  var event_action = "login";
+  var event_name = "login";
   if (!userId) {
     userId = Math.floor(Math.random() * 1000000000000);
     window.localStorage.setItem("userId", userId);
-    event_action = "register";
+    event_name = "sign_up";
   }
-  gtag("set", { user_id: userId });
-  gtag("event", event_action, {
-    event_category: "user",
-    event_label: domain
+  gtag("js", new Date());
+  gtag("config", "G-X7BH3GLYYE", { user_id: String(userId) });
+  gtag("event", event_name, {
+    method: "anonymous",
+    domain: domain
   });
 }
 
